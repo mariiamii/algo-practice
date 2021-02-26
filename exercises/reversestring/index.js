@@ -1,19 +1,50 @@
-// --- Directions
-// Given a string, return a new string with the reversed
-// order of characters
-// --- Examples
-//   reverse('apple') === 'elppa'
-//   reverse('hello') === 'olleh'
-//   reverse('Greetings!') === '!sgniteerG'
+// Given a str, return a new str with the reversed order of characters
+// E.g.: reverse("apple") === "elppa"
 
-// let str = 'apple'
-
+// Solution 1: built-in fn's
 function reverse(str) {
-    reversedStr = str.split('').reverse().join('')
+    reversedStr = str.split("").reverse().join("")
     return reversedStr
-    // .split(''): ['a','p','p','l','e']
-    // .reverse(): ['e','l','p','p','a']
-    // .join(''): elppa
 }
+// Explanation:
+// .split() returns substrings into a new arr: ["a","p","p","l","e"]
+// .reverse() reverses an arr: ["e","l","p","p","a"]
+// .join() returns a string of concatenated arr elements: elppa
+
+// Solution 2: decrementing for loop
+function reverse(str) {
+    let newStr = ""
+    for (let i = str.length - 1; i >= 0; i--) {
+        newStr += str[i]
+    }
+    return newStr
+}
+reverse("apple")
+// Explanation:
+// i = 5-1 = 4; "" + apple[4] = "e"
+// i = 4-1 = 3; "" + apple[3] = "el"
+// i = 3-1 = 2; "" + apple[2] = "elp"
+// i = 2-1 = 1; "" + apple[1] = "elpp"
+// i = 1-1 = 0; "" + apple[0] = "elppa"
+
+// Solution 3: recursion
+function reverse(str) {
+    if (str === "")
+        return ""
+    else
+        return reverse(str.substr(1)) + str.charAt(0)
+}
+reverse("apple")
+// Explanation:
+// substr(): returns the characters in a str beg at the specified *location* through the specified # of characters
+// charAt(): returns the character at the specified *index* from a str
+
+// 1) reverse("hello") returns reverse("hello".substr(1)) + str.charAt(0) => reverse("ello") + "h" = "olle" + "h"
+// 2) reverse("ello") returns reverse("ello".substr(1)) + str.charAt(0) => reverse("llo") + "e" = "oll" + "e"
+// 3) reverse("llo") returns reverse("llo".substr(1)) + str.charAt(0) => reverse("lo") + "l" = "ol" + "l"
+// 4) reverse("lo") returns reverse("lo".substr(1)) + str.charAt(0) => reverse("o") + "l" = "o" + "l"
+// 5) reverse("o") returns reverse("o".substr(1)) + str.charAt(0) => reverse("") + "o" = "o"
+
+// The method hits the if condition and the most highly nested call returns immediately
 
 module.exports = reverse;
