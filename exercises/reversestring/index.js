@@ -1,7 +1,7 @@
 // Given a str, return a new str w/ the reversed order of characters
 // E.g.: reverse("apple") === "elppa"
 
-// Solution 1: built-in fn's
+// SOLUTION 1: built-in fn's
 function reverse(str) {
     return str.split("").reverse().join("")
 }
@@ -11,7 +11,7 @@ reverse("apple")
 // .reverse() reverses an arr: ["e","l","p","p","a"]
 // .join() returns a string of concatenated arr elements: elppa
 
-// Solution 2: decrementing for loop
+// SOLUTION 2: decrementing for loop
 function reverse(str) {
     let newStr = ""
     for (let i = str.length - 1; i >= 0; i--) {
@@ -27,7 +27,7 @@ reverse("apple")
 // i = 2-1 = 1; "" + apple[1] = "elpp"
 // i = 1-1 = 0; "" + apple[0] = "elppa"
 
-// Solution 2: ES6 syntax
+// SOLUTION 2.1: ES6 syntax
 function reverse(str) {
     let newStr = ""
     for (let character of str) {
@@ -37,22 +37,29 @@ function reverse(str) {
 }
 reverse("apple")
 
-// Solution 3: built-in fn's w/ ES6
+// SOLUTION 3: built-in fn's w/ ES6
 function reverse(str) {
-    return str.split("").reduce((rev, char) => char + rev, "")
+    return str.split("").reduce((newStr, char) => char + newStr, "")
 }
 reverse("apple")
-// Eplanation:
-// .reduce(): 
+// Explanation:
+// str.split("") turns the str into an arr of elements ["a", "p", "p", "l", "e"]
+// .reduce(): executes a reducer fn (that you provide) on each element of the arr, returning a single value
+// "" is the starting initial value; newStr
+// char + newStr = "a" + "" = "a"
+// char + newStr = "p" + "a" = "pa"
+// char + newStr = "p" + "pa" = "ppa"
+// char + newStr = "l" + "ppa" = "lppa"
+// char + newStr = "e" + "lppa" = "elppa"
 
-// Solution 4: recursion
+// SOLUTION 4: recursion
 function reverse(str) {
     if (str === "")
         return ""
     else
         return reverse(str.substr(1)) + str.charAt(0)
 }
-reverse("apple")
+reverse("hello")
 // Explanation:
 // substr(): returns the characters in a str beg at the specified *location* through the specified # of characters
 // charAt(): returns the character at the specified *index* from a str
