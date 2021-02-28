@@ -1,11 +1,11 @@
-// Given a str, return a new str with the reversed order of characters
+// Given a str, return a new str w/ the reversed order of characters
 // E.g.: reverse("apple") === "elppa"
 
 // Solution 1: built-in fn's
 function reverse(str) {
-    reversedStr = str.split("").reverse().join("")
-    return reversedStr
+    return str.split("").reverse().join("")
 }
+reverse("apple")
 // Explanation:
 // .split() returns substrings into a new arr: ["a","p","p","l","e"]
 // .reverse() reverses an arr: ["e","l","p","p","a"]
@@ -27,7 +27,25 @@ reverse("apple")
 // i = 2-1 = 1; "" + apple[1] = "elpp"
 // i = 1-1 = 0; "" + apple[0] = "elppa"
 
-// Solution 3: recursion
+// Solution 2: ES6 syntax
+function reverse(str) {
+    let newStr = ""
+    for (let character of str) {
+        newStr = character + newStr // note: not the same as newStr = newStr + character (incrementing)
+    }
+    return newStr
+}
+reverse("apple")
+
+// Solution 3: built-in fn's w/ ES6
+function reverse(str) {
+    return str.split("").reduce((rev, char) => char + rev, "")
+}
+reverse("apple")
+// Eplanation:
+// .reduce(): 
+
+// Solution 4: recursion
 function reverse(str) {
     if (str === "")
         return ""
