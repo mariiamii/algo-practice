@@ -10,9 +10,12 @@ function palindrome(str) {
 }
 
 // SOLUTION 2:
-// function palindrome(str) {
-    
-// }
+function palindrome(str) {
+    return str.split("").every((char, i) => char === str[str.length-i-1])
+}
+// Explanation:
+// .every(): used to do a boolean check on every element in an arr
+// str.length-i ensures the decrementing loop
 
 // SOLUTION 3:
 // function palindrome(str) {
