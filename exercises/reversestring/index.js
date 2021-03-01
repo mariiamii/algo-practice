@@ -22,10 +22,10 @@ function reverse(str) {
 reverse("apple")
 // Explanation:
 // i = 5-1 = 4; "" + apple[4] = "e"
-// i = 4-1 = 3; "" + apple[3] = "el"
-// i = 3-1 = 2; "" + apple[2] = "elp"
-// i = 2-1 = 1; "" + apple[1] = "elpp"
-// i = 1-1 = 0; "" + apple[0] = "elppa"
+// i = 4-1 = 3; "e" + apple[3] = "el"
+// i = 3-1 = 2; "el" + apple[2] = "elp"
+// i = 2-1 = 1; "elp" + apple[1] = "elpp"
+// i = 1-1 = 0; "elpp" + apple[0] = "elppa"
 
 // SOLUTION 2.1: ES6 syntax
 function reverse(str) {
