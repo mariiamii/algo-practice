@@ -4,21 +4,12 @@
 // reverseInt(500) === 5
 
 function reverseInt(n) {
-    let str = n.toString()
-    let reversed = str.split("").reverse().join("")
-    let parsed = parseInt(reversed)
-    return Math.sign(n) * parsed
+    let reversed = n.toString().str.split("").reverse().join("")
+    return Math.sign(n) * parseInt(reversed)
 }
-// reverseInt(-220)
 // Explanation:
-// .toString():
-// .parseInt():
-// Math.sign:
-
+// .toString(): returns a str representing the object
+// .parseInt(): parses a str arg & returns an int
+// Math.sign(): returns either +/- 1, indicating the sign of a # passed into the arg
 
 module.exports = reverseInt;
-
-// str = n.toString()
-// reversed = str.split("").reverse().join("")
-// parsed = parseInt(reversed)
-// return Math.sign(n) * parsed
