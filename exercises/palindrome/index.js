@@ -4,7 +4,7 @@
 // E.g.: palindrome("abcdefg") === false
 
 function palindrome(str) {
-    reversedStr = str.split("").reduce((newStr, char) => char + newStr, "")
+    let reversedStr = str.split("").reduce((newStr, char) => char + newStr, "")
     if (str === reversedStr)
         return true
     else
