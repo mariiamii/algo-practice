@@ -16,10 +16,6 @@ function palindrome(str) {
 // Explanation:
 // .every(): used to do a boolean check on every element in an arr
 // str.length-i ensures the decrementing loop
-
-// SOLUTION 3:
-// function palindrome(str) {
-    
-// }
+// Note: not the best solution b/c it's needlessly comparing twice as much as it needs to
 
 module.exports = palindrome;
