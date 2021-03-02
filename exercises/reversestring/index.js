@@ -1,5 +1,5 @@
 // Given a str, return a new str w/ the reversed order of characters
-// E.g.: reverse("apple") === "elppa"
+// reverse("apple") === "elppa"
 
 // SOLUTION 1: built-in fn's
 function reverse(str) {
