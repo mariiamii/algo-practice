@@ -4,8 +4,13 @@
 
 function maxChar(str) {
     let charMap = {}
+    let charsArr = str.split("")
 
-    for (let char of str) {
+    charsArr.forEach(char => {
+        charMap[char] = charMap[char]+1 || 1
+    })
+
+    // for (let char of str) {
         // works:
         // if (charMap[char]) {
         //     charMap[char]++
@@ -14,11 +19,11 @@ function maxChar(str) {
         // }
 
         // works:
-        charMap[char] = charMap[char]+1 || 1
+        // charMap[char] = charMap[char]+1 || 1 // why not ++ instead of charMap[char]+1
 
         // ternary:
         // charMap[char] ? charMap[char]++ : charMap[char]=1
-    }
+    // }
     console.log(charMap)
 }
 /* Explanation:
