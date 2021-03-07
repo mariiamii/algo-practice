@@ -26,6 +26,7 @@ function maxChar(str) {
     // }
     console.log(charMap)
 }
+
 /* Explanation:
 1) Create a new obj
 2) Iterate through the str
