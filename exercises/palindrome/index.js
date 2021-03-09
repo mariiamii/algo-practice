@@ -13,9 +13,10 @@ function palindrome(str) {
 function palindrome(str) {
     return str.split("").every((char, i) => char === str[str.length-i-1])
 }
-// Explanation:
-// .every(): used to do a boolean check on every element in an arr
-// str.length-i ensures the decrementing loop
-// Note: not the best solution b/c it's needlessly comparing twice as much as it needs to
+/* Explanation:
+.every(): used to do a boolean check on every element in an arr
+str.length-i ensures the decrementing loop
+Note: not the best solution b/c it's needlessly comparing twice as much as it needs to
+*/
 
 module.exports = palindrome;
