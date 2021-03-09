@@ -2,6 +2,7 @@
 // maxChar("abcccccccd") === "c"
 // maxChar("apple 1231111") === "1"
 
+// SOLTUION 1:
 function maxChar(str) {
     let charMap = {}
     let charsArr = str.split("")
@@ -9,10 +10,33 @@ function maxChar(str) {
     charsArr.forEach(char => {
         charMap[char] = charMap[char]+1 || 1
     })
-    // debugger
+
     return Object.keys(charMap).reduce((a,b) => charMap[a] > charMap[b] ? a : b)
 }
-// maxChar("Hey There!")
+
+// SOLUTION 2:
+function maxChar(str) {
+    let charMap = {}
+    let max = 0
+    let maxChar = ""
+
+    for (let char of str) { //for...of is NOT used for objects
+        if (charMap[char]) {
+            charMap[char]++
+        } else {
+            charMap[char]=1
+        }
+    }
+
+    for (let char in charMap) { //this is for...in
+        if (charMap[char] > max) {
+            max = charMap[char]
+            maxChar = char
+        }
+    }
+
+    return maxChar
+}
 
 /* Explanation:
 1) Create a new obj
@@ -45,6 +69,7 @@ function maxChar(str) {
     for (let char of str) {
         charMap[char] ? charMap[char]++ : charMap[char]=1
     }
+6) Iterate through charMap obj and return the char that is most frequently used
 */ 
 
 module.exports = maxChar;
