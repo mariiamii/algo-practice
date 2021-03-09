@@ -15,9 +15,11 @@ function reverse(str) {
 // SOLUTION 2: decrementing for loop
 function reverse(str) {
     let newStr = ""
+
     for (let i = str.length - 1; i >= 0; i--) {
         newStr += str[i]
     }
+
     return newStr
 }
 
@@ -32,9 +34,11 @@ i = 1-1 = 0; "elpp" + apple[0] = "elppa"
 // SOLUTION 2.1: ES6 syntax
 function reverse(str) {
     let newStr = ""
+    
     for (let character of str) {
         newStr = character + newStr // note: not the same as newStr = newStr + character (incrementing)
     }
+
     return newStr
 }
 
