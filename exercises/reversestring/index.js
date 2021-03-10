@@ -60,10 +60,11 @@ char + newStr = "e" + "lppa" = "elppa"
 
 // SOLUTION 4: recursion
 function reverse(str) {
-    if (str === "")
+    if (str === "") {
         return ""
-    else
+    } else {
         return reverse(str.substr(1)) + str.charAt(0)
+    }
 }
 
 /* Explanation:
