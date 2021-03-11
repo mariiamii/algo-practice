@@ -1,13 +1,14 @@
-// --- Directions
-// Check to see if two provided strings are anagrams of eachother.
-// One string is an anagram of another if it uses the same characters
-// in the same quantity. Only consider characters, not spaces
-// or punctuation.  Consider capital letters to be the same as lower case
-// --- Examples
-//   anagrams('rail safety', 'fairy tales') --> True
-//   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
-//   anagrams('Hi there', 'Bye there') --> False
+/* Directions:
+Check to see if 2 provided strings are anagrams of each other
+Anagram: a word, phrase, or name formed by rearranging the letters of another. Only consider characters, not spaces, punctuation, or capitalization
 
-function anagrams(stringA, stringB) {}
+anagrams("rail safety", "fairy tales") --> True
+anagrams("RAIL! SAFETY!", "fairy tales") --> True
+anagrams("Hi there", "Bye there") --> False
+*/
+
+function anagrams(stringA, stringB) {
+    
+}
 
 module.exports = anagrams;
