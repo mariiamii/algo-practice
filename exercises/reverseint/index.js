@@ -1,7 +1,9 @@
-// Given an int, return an int that is the reverse ordering of #'s
-// reverseInt(15) === 51
-// reverseInt(-90) === -9
-// reverseInt(500) === 5
+/* Directions:
+Given an int, return an int that is the reverse ordering of #'s
+reverseInt(15) === 51
+reverseInt(-90) === -9
+reverseInt(500) === 5
+*/
 
 function reverseInt(n) {
     let reversed = n.toString().str.split("").reverse().join("")

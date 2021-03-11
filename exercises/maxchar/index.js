@@ -1,6 +1,8 @@
-// Given a str, return the character that is most commonly used in the str
-// maxChar("abcccccccd") === "c"
-// maxChar("apple 1231111") === "1"
+/* Directions:
+Given a str, return the character that is most commonly used in the str
+maxChar("abcccccccd") === "c"
+maxChar("apple 1231111") === "1"
+*/
 
 // SOLTUION 1:
 function maxChar(str) {
@@ -8,10 +10,10 @@ function maxChar(str) {
     let charsArr = str.split("")
 
     charsArr.forEach(char => {
-        charMap[char] = charMap[char]+1 || 1
+        charMap[char] = charMap[char] + 1 || 1
     })
 
-    return Object.keys(charMap).reduce((a,b) => charMap[a] > charMap[b] ? a : b)
+    return Object.keys(charMap).reduce((a, b) => charMap[a] > charMap[b] ? a : b)
 }
 
 // SOLUTION 2:
@@ -24,7 +26,7 @@ function maxChar(str) {
         if (charMap[char]) {
             charMap[char]++
         } else {
-            charMap[char]=1
+            charMap[char] = 1
         }
     }
 
@@ -48,7 +50,7 @@ function maxChar(str) {
     let charsArr = str.split("")
     
     charsArr.forEach(char => {
-        charMap[char] = charMap[char]+1 || 1
+        charMap[char] = charMap[char] + 1 || 1
     })
 
     2) if...else w/in for...of
@@ -56,18 +58,18 @@ function maxChar(str) {
         if (charMap[char]) {
             charMap[char]++
         } else {
-            charMap[char]=1
+            charMap[char] = 1
         }
     }
 
     3) Conditional w/in for...of
     for (let char of str) {
-        charMap[char] = charMap[char]+1 || 1 // why not ++ instead of charMap[char]+1?
+        charMap[char] = charMap[char] + 1 || 1 // why not ++ instead of charMap[char] + 1?
     }
 
     4) Ternary w/in for...of
     for (let char of str) {
-        charMap[char] ? charMap[char]++ : charMap[char]=1
+        charMap[char] ? charMap[char]++ : charMap[char] = 1
     }
 6) Iterate through charMap obj and return the char that is most frequently used
 */ 

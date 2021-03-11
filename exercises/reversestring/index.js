@@ -1,5 +1,7 @@
-// Given a str, return a new str w/ the reversed order of characters
-// reverse("apple") === "elppa"
+/* Directions:
+Given a str, return a new str w/ the reversed order of characters
+reverse("apple") === "elppa"
+*/
 
 // SOLUTION 1: built-in fn's
 function reverse(str) {
@@ -7,9 +9,9 @@ function reverse(str) {
 }
 
 /* Explanation:
-.split() returns substrings into a new arr: ["a","p","p","l","e"]
-.reverse() reverses an arr: ["e","l","p","p","a"]
-.join() returns a string of concatenated arr elements: elppa
+.split(): returns substrings into a new arr; E.g. ["a","p","p","l","e"]
+.reverse(): reverses an arr; E.g. ["e","l","p","p","a"]
+.join(): returns a string of concatenated arr elements; E.g. elppa
 */
 
 // SOLUTION 2: decrementing for loop
@@ -48,7 +50,7 @@ function reverse(str) {
 }
 
 /* Explanation:
-str.split("") turns the str into an arr of elements ["a", "p", "p", "l", "e"]
+.split(): turns the str into an arr of elements; E.g. ["a", "p", "p", "l", "e"]
 .reduce(): executes a reducer fn (that you provide) on each element of the arr, returning a single value
 "" is the starting initial value; newStr
 char + newStr = "a" + "" = "a"
@@ -68,8 +70,8 @@ function reverse(str) {
 }
 
 /* Explanation:
-substr(): returns the characters in a str beg at the specified *location* through the specified # of characters
-charAt(): returns the character at the specified *index* from a str
+.substr(): returns the characters in a str beg at the specified *location* through the specified # of characters
+.charAt(): returns the character at the specified *index* from a str
 
 1) reverse("hello") returns reverse("hello".substr(1)) + str.charAt(0) => reverse("ello") + "h" = "olle" + "h"
 2) reverse("ello") returns reverse("ello".substr(1)) + str.charAt(0) => reverse("llo") + "e" = "oll" + "e"
