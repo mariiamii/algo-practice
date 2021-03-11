@@ -1,26 +1,39 @@
 // Given an arr & chunk size, divide the arr into many subarrays, where each subarray is of length size
-// In the below eg, 2 is the # of elements that go into each chunk, not the total # of chunks
+// In the below eg, 2 is the # of elements per chunk, not the total # of chunks
 // chunk([1, 2, 3, 4], 2) --> [[ 1, 2], [3, 4]]
 // chunk([1, 2, 3, 4, 5], 2) --> [[ 1, 2], [3, 4], [5]]
 // chunk([1, 2, 3, 4, 5, 6, 7, 8], 3) --> [[ 1, 2, 3], [4, 5, 6], [7, 8]]
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
+// SOLUTION 1:
+// function chunk(array, size) {
+//     let chunked = []
+    
+//     array.forEach(ele => {
+//         let lastChunk = chunked[chunked.length - 1]
+
+//         if (!lastChunk || lastChunk.length === size) {
+//             chunked.push([ele])
+//         } else {
+//             lastChunk.push(ele)
+//         }
+//     })
+
+//     return chunked
+// }
+
+// SOLUTION 2:
 function chunk(array, size) {
     let chunked = []
-    
-    array.forEach(ele => {
-        let lastChunk = chunked[chunked.length - 1]
+    let i = 0
 
-        if (!lastChunk || lastChunk.length === size) {
-            chunked.push([ele])
-        } else {
-            lastChunk.push(ele)
-        }
-    })
+    while (i < array.length) {
+        chunked.push(array.slice(i, i += size)) //.slice(0,2)
+    }
 
     return chunked
-}
+} 
 
 /* Explanation:
 1) Create an empty arr to hold the "chuncked" chunks
