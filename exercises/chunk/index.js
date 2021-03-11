@@ -10,15 +10,15 @@ function chunk(array, size) {
     let chunked = []
     
     array.forEach(ele => {
-        let lastEle = chunked[chunked.length - 1]
+        let lastChunk = chunked[chunked.length - 1]
 
-        if (!lastEle || lastEle.length === size) {
+        if (!lastChunk || lastChunk.length === size) {
             chunked.push([ele])
         } else {
-            lastEle.push(ele)
+            lastChunk.push(ele)
         }
     })
-    
+
     return chunked
 }
 
@@ -26,7 +26,7 @@ function chunk(array, size) {
 1) Create an empty arr to hold the "chuncked" chunks
 2) For each ele in the "unchunked" arr (iteration):
     1) Retrieve the last ele in "chunked"
-    2) If the last ele does not exist, or if the chunk's (sub-arr) length is equal to the chunk size, push a new chunk (sub-arr) into "chunked" w/ the current ele that you're iterating over
+    2) If the last ele does not exist, or if the last chunk's (sub-arr) length is equal to the chunk size, push a new chunk (sub-arr) into "chunked" w/ the current ele that you're iterating over
     3) Else, add the current ele into the chunk
 */
 
