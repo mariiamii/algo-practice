@@ -37,9 +37,11 @@ function buildCharMap(str) {
 
 module.exports = anagrams;
 
-/* Explanation:
+/* Explanation (on RegEx); source: https://regexr.com/:
 str = "hey there!"
-str.replace(/\s/g, " ") //=> "heythere"; \s is the regex for "whitespace", and g is the "global" flag, meaning match ALL \s (whitespaces)
-
-
+str.replace(/[^\w]/g, "") //=> "heythere" 
+\w    =>  used to find a word character (a character from a-z, A-Z, 0-9, including the underscore)
+[^]   =>  used to find any character NOT between the brackets, in this case, anything that isn't a word character (i.e. spaces & punctuation)
+g     =>  used to perform a global match (find all matches rather than stopping after the first match)
+""    => replace all matches with empty str
 */
