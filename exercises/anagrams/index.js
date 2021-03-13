@@ -8,30 +8,31 @@ anagrams("Hi there", "Bye there") --> False
 */
 
 function anagrams(stringA, stringB) {
-    let cleanerA = stringA.replace(/[^\w]/g, "").toLowerCase()
-    let cleanerB = stringB.replace(/[^\w]/g, "").toLowerCase()
+    let charMapA = buildCharMap(stringA)
+    let charMapB = buildCharMap(stringB)
 
-    let arrA = cleanerA.split("")
-    let arrB = cleanerB.split("")
-
-    let objA = {}
-    let objB = {}
-
-    arrA.forEach(char => {
-        objA[char] = objA[char] + 1 || 1
-    })
-
-    arrB.forEach(char => {
-        objB[char] = objB[char] + 1 || 1
-    })
-
-    if (arrA.length != arrB.length) {
+    if (Object.keys(charMapA).length !== Object.keys(charMapB).length) {
         return false
-    } else if (Object.keys(objA) === Object.keys(objB) && Object.values(objA) === Object.values(objB)) {
-        return true
-    } else {
-        return false
+    } 
+
+    for (let key in charMapA) {
+        if (charMapA[key] !== charMapB[key]) { //values don't equal
+            return false
+        } else {
+            return true
+        }
     }
+}
+
+// Create a helper fn instead of 2 charMap loops; DRY:
+function buildCharMap(str) {
+    let charMap = {}
+
+    for (let char of str.replace(/[^\w]/g, "").toLowerCase()) {
+        charMap[char] = charMap[char] + 1 || 1
+    }
+
+    return charMap
 }
 
 module.exports = anagrams;

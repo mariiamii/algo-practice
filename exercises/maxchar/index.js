@@ -22,7 +22,7 @@ function maxChar(str) {
     let max = 0
     let maxChar = ""
 
-    for (let char of str) { //for...of is NOT used for objects
+    for (let char of str) { //for...of is for iterating over arrays
         if (charMap[char]) {
             charMap[char]++
         } else {
@@ -30,7 +30,7 @@ function maxChar(str) {
         }
     }
 
-    for (let char in charMap) { //this is for...in
+    for (let char in charMap) { //for...in is for iterating over objects
         if (charMap[char] > max) {
             max = charMap[char]
             maxChar = char
