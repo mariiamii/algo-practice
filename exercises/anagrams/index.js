@@ -35,8 +35,6 @@ function buildCharMap(str) {
     return charMap
 }
 
-module.exports = anagrams;
-
 /* Explanation (on RegEx); source: https://regexr.com/:
 str = "hey there!"
 str.replace(/[^\w]/g, "") //=> "heythere" 
@@ -44,4 +42,9 @@ str.replace(/[^\w]/g, "") //=> "heythere"
 [^]   =>  used to find any character NOT between the brackets, in this case, anything that isn't a word character (i.e. spaces & punctuation)
 g     =>  used to perform a global match (find all matches rather than stopping after the first match)
 ""    => replace all matches with empty str
+
+Could've also just used \W:
+.replace(/\W/g, "")
 */
+
+module.exports = anagrams;
