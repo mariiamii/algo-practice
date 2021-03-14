@@ -7,6 +7,7 @@ anagrams("RAIL! SAFETY!", "fairy tales") --> True
 anagrams("Hi there", "Bye there") --> False
 */
 
+// SOLUTION 1:
 function anagrams(stringA, stringB) {
     let charMapA = buildCharMap(stringA)
     let charMapB = buildCharMap(stringB)
@@ -35,7 +36,16 @@ function buildCharMap(str) {
     return charMap
 }
 
-/* Explanation (on RegEx); source: https://regexr.com/:
+// SOLUTION 2:
+function anagrams(stringA, stringB) {
+    return cleanStr(stringA) === cleanStr(stringB)
+}
+
+function cleanStr(str) {
+    return str.replace(/\W/g, "").toLowerCase().split("").sort().join("")
+}
+
+/* Explanation (on RegEx); sources: https://regexr.com/ & https://www.youtube.com/watch?v=rhzKDrUiJVk:
 str = "hey there!"
 str.replace(/[^\w]/g, "") //=> "heythere" 
 \w    =>  used to find a word character (a character from a-z, A-Z, 0-9, including the underscore)
