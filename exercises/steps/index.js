@@ -1,22 +1,22 @@
-// --- Directions
-// Write a function that accepts a positive number N.
-// The function should console log a step shape
-// with N levels using the # character.  Make sure the
-// step has spaces on the right hand side!
-// --- Examples
-//   steps(2)
-//       '# '
-//       '##'
-//   steps(3)
-//       '#  '
-//       '## '
-//       '###'
-//   steps(4)
-//       '#   '
-//       '##  '
-//       '### '
-//       '####'
+/* Directions:
+Write a fn that accepts a positive # N. The fn should console.log() a step shape w/ N levels using the # char. Make sure the step has spaces on the right hand side!
 
-function steps(n) {}
+steps(2)
+    '# '
+    '##'
+steps(3)
+    '#  '
+    '## '
+    '###'
+steps(4)
+    '#   '
+    '##  '
+    '### '
+    '####'
+*/
+
+function steps(n) {
+    
+}
 
 module.exports = steps;
