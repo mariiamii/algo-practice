@@ -13,25 +13,23 @@ steps(4)
     '##  '
     '### '
     '####'
-    
 */
 
 // SOLUTION 1:
 function steps(n) {
-    
-    for (let i = 0; i < n; i++) { //iterate through rows
+    for (let row = 0; row < n; row++) { //iterate through rows
         let stair = ""
 
-        for () { //iterate through columns
-            if () {
-    
-            } else {
+        for (let column = 0; column < n; column++) { //iterate through columns
+            if (column <= row) {
                 stair += "#"
+            } else {
+                stair += " "
             }
-
         }
+
+        console.log(stair) //console.log() must be inside the 1st for loop
     }
-    console.log(stair)
 }
 
 module.exports = steps;
@@ -40,9 +38,9 @@ module.exports = steps;
 1) Iterate through rows (0-n)
     1) Create an empty str, "stair"
     2) Iterate through columns (0-n)
-        1) If the current column is equal to or less than the current row
+        1) If the current column is less than or equal to the current row
             Add a "#" to the "stair"
         2) Else
-            Add a spcase to "stair"
+            Add a space to "stair"
     3) Console.log("stair")
 */
