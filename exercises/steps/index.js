@@ -48,23 +48,23 @@ function () {
 
 }
 
-/* Explanation:
-function printNumber(n) {
-    if (n === 0) {
-        return;
+// Recursion:
+function printNumber(n) { //#2; passing in n as reasonable default
+    if (n === 0) { //#3; checking if you've met the base case
+        return; //return 0 & stop all work
     }
 
     console.log(n)
-    printNumber(n - 1)
+    printNumber(n - 1) //#1; bare info needed to call the fn again (counter) & progress towards base case
 }
 
 printNumber(10)
 
+/* Explanation: recursion
 1) Figure out the bare minimum pieces of info to represent your problem
 2) Give reasonable defaults to the bare minimum pieces of info
-3) Check the base case. Is there any work left to do? If not, return
-4) Do some work. Call your fn again, making sure the arguments have changed in some fashion
+3) Check the base case (when there is no more work to do & it's time to stop the recursion process). Is there any work left to do? If not, return
+4) Do some work. Call your fn again, making sure the arguments have changed in some fashion (otherwise, infinite recusion)
 */
-
 
 module.exports = steps;
