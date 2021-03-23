@@ -15,7 +15,7 @@ steps(4)
     '####'
 */
 
-// SOLUTION 1:
+// SOLUTION 1: iteration
 function steps(n) {
     for (let row = 0; row < n; row++) { //iterate through rows
         let stair = ""
@@ -32,8 +32,6 @@ function steps(n) {
     }
 }
 
-module.exports = steps;
-
 /* Explanation:
 1) Iterate through rows (0-n)
     1) Create an empty str, "stair"
@@ -44,3 +42,29 @@ module.exports = steps;
             Add a space to "stair"
     3) Console.log("stair")
 */
+
+// SOLUTION 2: recursion
+function () {
+
+}
+
+/* Explanation:
+function printNumber(n) {
+    if (n === 0) {
+        return;
+    }
+
+    console.log(n)
+    printNumber(n - 1)
+}
+
+printNumber(10)
+
+1) Figure out the bare minimum pieces of info to represent your problem
+2) Give reasonable defaults to the bare minimum pieces of info
+3) Check the base case. Is there any work left to do? If not, return
+4) Do some work. Call your fn again, making sure the arguments have changed in some fashion
+*/
+
+
+module.exports = steps;
