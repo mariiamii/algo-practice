@@ -49,7 +49,7 @@ function steps(n, row = 0, stair = "") {
         return;
     } 
     
-    if (stair.length === n) {
+    if (stair.length === n) { //stair.length is equivalent to column
         console.log(stair)
         return steps(n, row + 1)
     }
