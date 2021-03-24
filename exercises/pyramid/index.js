@@ -31,10 +31,13 @@ function pyramid(n) {
     }
 }
 
+// SOLUTION 2:
+
+
 /* Explanation:
 1) Iterate through rows (0 - n)
     1) Create an empty str, "level"
-    2) Iterate through columns (0 - ???)
+    2) Iterate through columns (0 - (2 * n - 1))
         1) If the current column should have a "#"
             Add a "#" to the "level"
         2) Else
