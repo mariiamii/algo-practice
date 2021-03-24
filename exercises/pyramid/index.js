@@ -1,4 +1,4 @@
-/* Directions:
+/* Directions: (similar to steps algo)
 Write a fn that accepts a positive number N. The fn should console.log() a pyramid shape with N levels using the # char. Make sure the pyramid has spaces on both the left *and* right hand sides.
 
 pyramid(1)
@@ -13,23 +13,23 @@ pyramid(3)
 */
 
 // SOLUTION 1:
-// function pyramid(n) {
-//     let midpoint = Math.floor((2 * n - 1) / 2)
+function pyramid(n) {
+    let midpoint = Math.floor((2 * n - 1) / 2)
 
-//     for (let row = 0; row < n; row++) {
-//         let level = ""
+    for (let row = 0; row < n; row++) {
+        let level = ""
 
-//         for (let column = 0; column < 2 * n - 1; column++) {
-//             if (column >= midpoint - row && column <= midpoint + row) {
-//                 level += "#"
-//             } else {
-//                 level += " "
-//             }
-//         }
+        for (let column = 0; column < 2 * n - 1; column++) {
+            if (column >= midpoint - row && column <= midpoint + row) {
+                level += "#"
+            } else {
+                level += " "
+            }
+        }
 
-//         console.log(level)
-//     }
-// }
+        console.log(level)
+    }
+}
 
 /* Explanation:
 1) Iterate through rows (0 - n)
@@ -44,15 +44,18 @@ pyramid(3)
 
 // SOLUTION 2: recursion
 function pyramid(n, row = 0, level = "") {
+    // Base case; once n === row, stop executing the pyramid fn
     if (n === row) {
         return;
     } 
     
+    // If the string length is equivalent to number of columns, console.log() & re-execute the fn
     if (level.length === 2 * n - 1) { //level.length is equivalent to column
         console.log(level)
         return pyramid(n, row + 1)
     }
 
+    // The logic for "#" or " "
     let midpoint = Math.floor((2 * n - 1) / 2)
     if (level.length >= midpoint - row && level.length <= midpoint + row) {
         level += "#"
@@ -63,7 +66,4 @@ function pyramid(n, row = 0, level = "") {
     pyramid(n, row, level)
 }
 
-/* Explanation:
-
-*/
 module.exports = pyramid;
