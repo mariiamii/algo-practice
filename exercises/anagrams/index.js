@@ -1,6 +1,6 @@
 /* Directions:
-Check to see if 2 provided strings are anagrams of each other
-Anagram: a word, phrase, or name formed by rearranging the letters of another. Only consider characters, not spaces, punctuation, or capitalization
+Check to see if 2 provided strings are anagrams of each other.
+Anagram: a word, phrase, or name formed by rearranging the letters of another. Only consider characters; not spaces, punctuation, or capitalization.
 
 anagrams("rail safety", "fairy tales") --> True
 anagrams("RAIL! SAFETY!", "fairy tales") --> True
@@ -36,7 +36,7 @@ function buildCharMap(str) {
     return charMap
 }
 
-// SOLUTION 2: regex
+// SOLUTION 2: regular expression (regex)
 function anagrams(stringA, stringB) {
     return cleanStr(stringA) === cleanStr(stringB)
 }
@@ -47,7 +47,8 @@ function cleanStr(str) {
 
 /* Explanation (on RegEx); sources: https://regexr.com/ & https://www.w3schools.com/jsref/jsref_obj_regexp.asp & https://www.youtube.com/watch?v=rhzKDrUiJVk:
 str = "hey there!"
-str.replace(/[^\w]/g, "") //=> "heythere" 
+str.replace(/[^\w]/g, "") //=> "heythere"
+
 \w    =>  used to find a word character (a character from a-z, A-Z, 0-9, including the underscore)
 [^]   =>  used to find any character NOT between the brackets, in this case, anything that isn't a word character (i.e. spaces & punctuation)
 g     =>  does a global match (find all matches rather than stopping after the 1st match)

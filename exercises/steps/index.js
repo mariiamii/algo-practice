@@ -1,5 +1,5 @@
 /* Directions:
-Write a fn that accepts a positive number N. The fn should console.log() a step shape w/ N levels using the # char. Make sure the step has spaces on the right hand side! Note: N implies the number of rows & columns
+Write a fn that accepts a positive number N. The fn should console.log() a step shape w/ N levels using the # char. Make sure the step has spaces on the right hand side! Note: N implies the number of rows & columns.
 
 steps(2)
     '# ' //pay attention to the number of spaces after #

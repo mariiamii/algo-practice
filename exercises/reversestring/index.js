@@ -1,5 +1,6 @@
 /* Directions:
-Given a str, return a new str w/ the reversed order of characters
+Given a string, return a new string w/ the reversed order of characters.
+
 reverse("apple") === "elppa"
 */
 

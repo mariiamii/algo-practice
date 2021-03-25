@@ -1,6 +1,7 @@
 /* Directions:
-Given a str, return true if the string is a palindrome or false if it is not 
-Palindrome: str that form the same word if it is reversed (includes spaces & punctuation)
+Given a string, return true if the string is a palindrome or false if it is not.
+Palindrome: string that form the same word if it is reversed (includes spaces & punctuation).
+
 palindrome("abba") === true
 palindrome("abcdefg") === false
 */
@@ -18,7 +19,8 @@ function palindrome(str) {
 
 /* Explanation:
 .every(): used to do a boolean check on every element in an arr
-str.length-i ensures the decrementing loop
+str.length - i ensures the decrementing loop
+
 Note: not the best solution b/c it's needlessly comparing twice as much as it needs to
 */
 

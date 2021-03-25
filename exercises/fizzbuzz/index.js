@@ -1,8 +1,8 @@
 /* Directions:
-Console log #'s from 1 - n
-For multiples of 3, print “fizz” instead of the #
-For multiples of 5, print “buzz” instead of the #
-For multiples of 3 and 5, print “fizzbuzz”
+Console log #'s from 1 - n.
+For multiples of 3, print “fizz” instead of the #.
+For multiples of 5, print “buzz” instead of the #.
+For multiples of 3 and 5, print “fizzbuzz”.
 
 fizzBuzz(5);
 1

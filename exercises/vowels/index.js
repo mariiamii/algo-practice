@@ -1,9 +1,10 @@
 /* Directions:
-Write a fn that returns the # of vowels used in a string. Vowels are the characters 'a', 'e', 'i', 'o', and 'u'.
+Write a fn that returns the # of vowels used in a string. 
+Vowels: "a", "e", "i", "o", & "u".
 
-vowels('Hi There!') --> 3
-vowels('Why do you ask?') --> 4
-vowels('Why?') --> 0
+vowels("Hi There!") --> 3
+vowels("Why do you ask?") --> 4
+vowels("Why?") --> 0
 */
 
 // SOLUTION 1: iteration
@@ -50,8 +51,8 @@ regex: /[aeiou]/gi
 g     =>  does a global match (find all matches rather than stopping after the 1st match)
 i     =>  does a case-insensitive search
 
-.match() will return a null if no matches are found, and an array of all matches if matches are found
-You need a ternary exp in the case that it's a null
+.match() will return a null if no matches are found & an arr of all matches if matches are found
+You need a ternary exp in the case that it"s a null
 */
 
 module.exports = vowels;
