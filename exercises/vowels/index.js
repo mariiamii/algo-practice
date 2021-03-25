@@ -28,7 +28,7 @@ function vowels(str) {
     let count = 0
 
     for (let char of str.toLowerCase()) {
-        if (checker.includes(char)) {
+        if (checker.includes(char)) { //.includes works on arr & str
             count++
         }
     }
@@ -36,7 +36,22 @@ function vowels(str) {
     return count
 }
 
-// SOLUTION 2: regular expression
+// SOLUTION 2: regular expression (regex)
+function vowels(str) {
+    let matches = str.match(/[aeiou]/gi)
+    return matches ? matches.length : 0
+}
 
+/* Explanation:
+.match(): used to see if some possible thing in the w/in the () is included in the str
+
+regex: /[aeiou]/gi
+[]    =>  does a search for any characters (like aeiou) in a str
+g     =>  does a global match (find all matches rather than stopping after the 1st match)
+i     =>  does a case-insensitive search
+
+.match() will return a null if no matches are found, and an array of all matches if matches are found
+You need a ternary exp in the case that it's a null
+*/
 
 module.exports = vowels;
