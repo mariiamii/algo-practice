@@ -8,12 +8,12 @@ vowels('Why?') --> 0
 
 // SOLUTION 1: iteration
 function vowels(str) {
-    let vowels = ["a", "e", "i", "o", "u"]
-    let arr = []
+        let checker = ["a", "e", "i", "o", "u"]
+        let arr = []
 
     for (let char of str.toLowerCase()) {
-        for (let i = 0; i < vowels.length; i++) {
-            if (char === vowels[i]) {
+        for (let i = 0; i < checker.length; i++) {
+            if (char === checker[i]) {
                 arr.push(char)
             }
         }
@@ -22,10 +22,21 @@ function vowels(str) {
     return arr.length
 }
 
-/* Explanation
+// SOLUTION 1.1: iteration w/ count
+function vowels(str) {
+    let checker = ["a", "e", "i", "o", "u"]
+    let count = 0
 
-*/
+    for (let char of str.toLowerCase()) {
+        if (checker.includes(char)) {
+            count++
+        }
+    }
+
+    return count
+}
 
 // SOLUTION 2: regular expression
+
 
 module.exports = vowels;
