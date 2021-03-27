@@ -16,7 +16,6 @@ matrix(4)
 */
 
 function matrix(n) {
-    
 }
 
 /* Explanation:
