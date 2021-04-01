@@ -32,21 +32,21 @@ function matrix(n) {
         startRow++
 
         // Right column
-        for (let i = startRow; i <= endRow; i++) { //i = 1
+        for (let i = startRow; i <= endRow; i++) {
             results[i][endColumn] = counter
             counter++
         }
         endColumn--
 
         // Bottom row
-        for (let i = endColumn; i >= startColumn; i--) { //i = 1
+        for (let i = endColumn; i >= startColumn; i--) {
             results[endRow][i] = counter
             counter++
         }
         endRow--
 
         // Left column
-        for (let i = endRow; i >= startRow; i--) { //i = 0
+        for (let i = endRow; i >= startRow; i--) {
             results[i][startColumn] = counter
             counter++
         }
@@ -63,7 +63,6 @@ function matrix(n) {
     for(let i = 0; i < n; i++) {
         results.push([])
     }
-
 √2) Create a counter variable, starting at 1
 √3) As long as (startColumn <= endColumn) AND (startRow <= endRow)
     √1) Loop from startColumn to endColumn
