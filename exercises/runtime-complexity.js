@@ -22,8 +22,9 @@ Every element in a collection has to be compared to every other element. "The ha
 
 6) Exponential time: 2 ^ n
 If you add a *single* element to a collection, the processing power required doubles
+*/
 
-EX 1: Reverse string
+//EX 1: Reverse string
 function reverse(str) {
     let newStr = ""
     
@@ -34,16 +35,17 @@ function reverse(str) {
     return newStr
 }
 
-Conclusion: 
+/* Conclusion: 
 abc -> cba
 abcdefg -> gfedcba
 
 Each additional character to the input str = an additional loop/step (1:1 relationship)
 "N", or "linear" runtime
+*/
 
-EX 2: Steps
+//EX 2: Steps
 function steps(n) {
-    for (let row = 0; row < n; row++)
+    for (let row = 0; row < n; row++) {
         let stair = ""
 
         for (let column = 0; column < n; column++) {
@@ -58,7 +60,7 @@ function steps(n) {
     }
 }
 
-Conclusion:
+/* Conclusion:
 When n = 2, you have to do 4 things
 When n = 3, you have to do 9 things
 When n = 4, you have to do 16 things
