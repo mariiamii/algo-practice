@@ -1,27 +1,38 @@
 /* 
-Runtime complexity: describes the performance of an algorithm
+Runtime complexity: describes the performance/efficiency of an algorithm
 - Means: how much more processing power/time is required to run an algorithm if you double the inputs?
 - Used to compare dif solutions/algorithms to a given problem
 - Given a problem -> solve it -> what is the runtime complexity of the solution you just did?
 
 Common runtime complexities: 
 1) Constant time: 1
-No matter how many elements you're working with, the algorithm will always take the same amount of time
+No matter what input you give to the algo/how many elements you're working w/, it will always take the same amount of time to execute; the holy grail; most effecient
 
 2) Logarithmic time: log(n)
-You have this if doubling the number of elements you are iterating over doesn't double the amount of work. Always assume that searching operations are log(n)
+Doubling the # of elements you're iterating over doesn't double the amount of time to execute; always assume that *searching* operations are log(n)
 
 3) Linear time: n
-Iterating through all elements in a collection of data. If you see a for loop spanning from 0 to array.length, you probably have "n", or linear runtime
+Adding 1 element to the input set adds 1 unit of more time to execute; always assume that any iteration of elements in a collection of data is a linear time (e.g., for loop spanning from 0 to array.length)
 
 4) Quasilinear time: n * log(n)
-You have this if doubling the number of elements you are iterating over doesn't double the amount of work. Always assume that any sorting operation is n*log(n)
+Adding 1 element to the input set adds 1 + a little bit of more time to execute; always assume that *sorting* operations are n*log(n)
 
 5) Quadratic time: n ^ 2
-Every element in a collection has to be compared to every other element. "The handshake problem"
+Every element in a collection has to be compared to every other element; "the handshake problem" (a person enters a room full of people and therefore will need to shake everyone's hand)
 
 6) Exponential time: 2 ^ n
-If you add a *single* element to a collection, the processing power required doubles
+If you add a *single* element to a collection, the processing power required doubles; ineffecient
+
+
+Big "O" Notation: another way of referencing runtime complexity
+- Given a problem -> solve it -> what is the "big O" of the solution you just did?
+
+O(n)    ->  Linear
+O(1)    ->  Constant
+O(n^2)  ->  Quadratic
+
+Identifying runtime complexity:
+
 */
 
 //EX 1: Reverse string
